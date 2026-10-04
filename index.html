@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aroma Coffee — Кофе, который хочется повторить</title>
+  <meta name="description" content="Aroma Coffee — уютная городская кофейня с свежим кофе, завтраками весь день и тёплой атмосферой.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo">aroma coffee</a>
+      <nav class="nav" id="nav">
+        <a href="#home" class="nav__link">Главная</a>
+        <a href="#menu" class="nav__link">Меню</a>
+        <a href="#about" class="nav__link">О нас</a>
+        <a href="#gallery" class="nav__link">Галерея</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
+      </nav>
+      <a href="#booking" class="btn btn--primary header__btn">Забронировать столик</a>
+      <button class="burger" id="burger" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&q=80" alt="Кофейня Aroma Coffee" class="hero__img">
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="container hero__content">
+      <h1 class="hero__title">Кофе, который хочется повторить</h1>
+      <p class="hero__text">Тихая городская кофейня с ароматным зерном, мягким светом и атмосферой, в которой хочется остаться подольше.</p>
+      <div class="hero__actions">
+        <a href="#menu" class="btn btn--primary">Посмотреть меню</a>
+        <a href="#booking" class="btn btn--outline">Забронировать столик</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="section menu" id="menu">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">Наше меню</span>
+        <h2 class="section__title">Выберите своё</h2>
+      </div>
+
+      <div class="menu__tabs">
+        <button class="menu__tab active" data-category="coffee">Кофе</button>
+        <button class="menu__tab" data-category="tea">Чай</button>
+        <button class="menu__tab" data-category="breakfast">Завтраки</button>
+        <button class="menu__tab" data-category="desserts">Десерты</button>
+      </div>
+
+      <div class="menu__grid">
+        <!-- Coffee -->
+        <article class="menu-card" data-category="coffee">
+          <div class="menu-card__img">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=600&q=80" alt="Эспрессо">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Эспрессо</h3>
+            <p class="menu-card__desc">Классический плотный шот из свежей обжарки</p>
+            <span class="menu-card__price">180 ₸</span>
+          </div>
+        </article>
+        <article class="menu-card" data-category="coffee">
+          <div class="menu-card__img">
+            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=80" alt="Капучино">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Капучино</h3>
+            <p class="menu-card__desc">Эспрессо, бархатистая молочная пена</p>
+            <span class="menu-card__price">290 ₸</span>
+          </div>
+        </article>
+        <article class="menu-card" data-category="coffee">
+          <div class="menu-card__img">
+            <img src="https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=600&q=80" alt="Флэт уайт">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Флэт Уайт</h3>
+            <p class="menu-card__desc">Двойной эспрессо и тонкий слой микропены</p>
+            <span class="menu-card__price">320 ₸</span>
+          </div>
+        </article>
+        <article class="menu-card" data-category="coffee">
+          <div class="menu-card__img">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80" alt="Латте">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Латте</h3>
+            <p class="menu-card__desc">Мягкий кофе с большим количеством молока</p>
+            <span class="menu-card__price">310 ₸</span>
+          </div>
+        </article>
+
+        <!-- Tea -->
+        <article class="menu-card hidden" data-category="tea">
+          <div class="menu-card__img">
+            <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&q=80" alt="Чёрный чай">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Чёрный чай</h3>
+            <p class="menu-card__desc">Классический цейлонский, заваривается в чайнике</p>
+            <span class="menu-card__price">220 ₸</span>
+          </div>
+        </article>
+        <article class="menu-card hidden" data-category="tea">
+          <div class="menu-card__img">
+            <img src="https://images.unsplash.com/photo-1556881286-fc6915169721?w=600&q=80" alt="Зелёный чай">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Зелёный сенча</h3>
+            <p class="menu-card__desc">Лёгкий японский чай с травяными нотами</p>
+            <span class="menu-card__price">240 ₸</span>
+          </div>
+        </article>
+        <article class="menu-card hidden" data-category="tea">
+          <div class="menu-card__img">
+            <img src="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?w=600&q=80" alt="Травяной чай">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Травяной сбор</h3>
+            <p class="menu-card__desc">Мята, ромашка, лемонграсс</p>
+            <span class="menu-card__price">250 ₸</span>
+          </div>
+        </article>
+        <article class="menu-card hidden" data-category="tea">
+          <div class="menu-card__img">
+            <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=600&q=80" alt="Масала">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Масала чай</h3>
+            <p class="menu-card__desc">Пряный индийский чай с молоком и специями</p>
+            <span class="menu-card__price">280 ₸</span>
+          </div>
+        </article>
+
+        <!-- Breakfast -->
+        <article class="menu-card hidden" data-category="breakfast">
+          <div class="menu-card__img">
+            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&q=80" alt="Авокадо тост">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Авокадо-тост</h3>
+            <p class="menu-card__desc">Хлеб на закваске, авокадо, яйцо пашот, микрозелень</p>
+            <span class="menu-card__price">420 ₸</span>
+          </div>
+        </article>
+        <article class="menu-card hidden" data-category="breakfast">
+          <div class="menu-card__img">
+            <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=600&q=80" alt="Гранола">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Гранола с йогуртом</h3>
+            <p class="menu-card__desc">Домашняя гранола, греческий йогурт, ягоды</p>
+            <span class="menu-card__price">380 ₸</span>
+          </div>
+        </article>
+        <article class="menu-card hidden" data-category="breakfast">
+          <div class="menu-card__img">
+            <img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?w=600&q=80" alt="Омлет">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Омлет с сыром</h3>
+            <p class="menu-card__desc">Пышный омлет, сыр, томаты черри, зелень</p>
+            <span class="menu-card__price">390 ₸</span>
+          </div>
+        </article>
+        <article class="menu-card hidden" data-category="breakfast">
+          <div class="menu-card__img">
+            <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600&q=80" alt="Сырники">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Сырники</h3>
+            <p class="menu-card__desc">Творожные сырники со сметаной или вареньем</p>
+            <span class="menu-card__price">350 ₸</span>
+          </div>
+        </article>
+
+        <!-- Desserts -->
+        <article class="menu-card hidden" data-category="desserts">
+          <div class="menu-card__img">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80" alt="Чизкейк">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Чизкейк</h3>
+            <p class="menu-card__desc">Нежный классический чизкейк Нью-Йорк</p>
+            <span class="menu-card__price">340 ₸</span>
+          </div>
+        </article>
+        <article class="menu-card hidden" data-category="desserts">
+          <div class="menu-card__img">
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80" alt="Брауни">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Шоколадный брауни</h3>
+            <p class="menu-card__desc">Тёплый брауни с орехами и мороженым</p>
+            <span class="menu-card__price">320 ₸</span>
+          </div>
+        </article>
+        <article class="menu-card hidden" data-category="desserts">
+          <div class="menu-card__img">
+            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80" alt="Тирамису">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Тирамису</h3>
+            <p class="menu-card__desc">Классический итальянский десерт</p>
+            <span class="menu-card__price">360 ₸</span>
+          </div>
+        </article>
+        <article class="menu-card hidden" data-category="desserts">
+          <div class="menu-card__img">
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80" alt="Круассан">
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Круассан</h3>
+            <p class="menu-card__desc">Свежая выпечка с маслом или начинкой</p>
+            <span class="menu-card__price">210 ₸</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="container about__grid">
+      <div class="about__content">
+        <span class="section__label">О кофейне</span>
+        <h2 class="section__title">Место, куда хочется возвращаться</h2>
+        <p class="about__text">Aroma Coffee — небольшая городская кофейня, где мы готовим кофе из свежей обжарки и создаём спокойную атмосферу без лишнего шума. Здесь можно поработать, встретиться с друзьями или просто насладиться чашкой идеального эспрессо.</p>
+        <p class="about__text">Мы верим, что хороший кофе — это не только вкус, но и момент, который запоминается.</p>
+        <ul class="about__features">
+          <li>
+            <span class="about__icon">☕</span>
+            <div>
+              <strong>Свежий кофе</strong>
+              <p>Зёрна обжарки не старше 3 недель</p>
+            </div>
+          </li>
+          <li>
+            <span class="about__icon">🍳</span>
+            <div>
+              <strong>Завтраки весь день</strong>
+              <p>С 8:00 до 20:00 — без ограничений</p>
+            </div>
+          </li>
+          <li>
+            <span class="about__icon">🌿</span>
+            <div>
+              <strong>Уютная атмосфера</strong>
+              <p>Мягкий свет, удобные места, тихая музыка</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="about__image">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80" alt="Интерьер Aroma Coffee">
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">Галерея</span>
+        <h2 class="section__title">Атмосфера Aroma</h2>
+      </div>
+      <div class="gallery__grid">
+        <div class="gallery__item gallery__item--large">
+          <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=900&q=80" alt="Кофе">
+        </div>
+        <div class="gallery__item">
+          <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80" alt="Латте">
+        </div>
+        <div class="gallery__item">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80" alt="Интерьер">
+        </div>
+        <div class="gallery__item">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80" alt="Чашка кофе">
+        </div>
+        <div class="gallery__item">
+          <img src="https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=600&q=80" alt="Десерт">
+        </div>
+        <div class="gallery__item gallery__item--wide">
+          <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=900&q=80" alt="Гости">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">Отзывы</span>
+        <h2 class="section__title">Что говорят гости</h2>
+      </div>
+      <div class="reviews__grid">
+        <div class="review-card review-card--placeholder">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">Отзывы наших гостей появятся здесь после запуска</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar"></div>
+            <span>— — —</span>
+          </div>
+        </div>
+        <div class="review-card review-card--placeholder">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">Отзывы наших гостей появятся здесь после запуска</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar"></div>
+            <span>— — —</span>
+          </div>
+        </div>
+        <div class="review-card review-card--placeholder">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">Отзывы наших гостей появятся здесь после запуска</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar"></div>
+            <span>— — —</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacts -->
+  <section class="section contacts" id="contacts">
+    <div class="container contacts__grid">
+      <div class="contacts__info">
+        <span class="section__label">Контакты</span>
+        <h2 class="section__title">Как нас найти</h2>
+        <ul class="contacts__list">
+          <li>
+            <strong>Адрес</strong>
+            <p>ул. Пушкинская, 12<br>г. Астана</p>
+          </li>
+          <li>
+            <strong>Телефон</strong>
+            <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+          </li>
+          <li>
+            <strong>График работы</strong>
+            <p>Пн–Пт: 08:00 – 22:00<br>Сб–Вс: 09:00 – 23:00</p>
+          </li>
+        </ul>
+        <div class="contacts__social">
+          <a href="#" class="btn btn--outline social-btn" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+          <a href="#" class="btn btn--outline social-btn" aria-label="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="contacts__map">
+        <div class="map-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <p>Карта будет здесь</p>
+          <span>ул. Пушкинская, 12</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section class="section booking" id="booking">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">Бронирование</span>
+        <h2 class="section__title">Забронировать столик</h2>
+      </div>
+      <form class="booking-form" id="bookingForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Дата</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="time">Время</label>
+            <input type="time" id="time" name="time" required>
+          </div>
+          <div class="form-group">
+            <label for="guests">Гостей</label>
+            <select id="guests" name="guests" required>
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6+</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Забронировать</button>
+        <p class="form-note">После отправки с вами свяжется администратор для подтверждения.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#home" class="logo">aroma coffee</a>
+        <p>Кофе, который хочется повторить</p>
+      </div>
+      <div class="footer__contacts">
+        <h4>Контакты</h4>
+        <p>ул. Пушкинская, 12, Астана</p>
+        <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+      </div>
+      <div class="footer__hours">
+        <h4>Часы работы</h4>
+        <p>Пн–Пт: 08:00 – 22:00</p>
+        <p>Сб–Вс: 09:00 – 23:00</p>
+      </div>
+      <div class="footer__social">
+        <h4>Мы в сети</h4>
+        <div class="footer__links">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="WhatsApp">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2026 Aroma Coffee. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <span>Спасибо! Заявка на бронирование отправлена.</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+<link rel="stylesheet" href="style.css">
+</html>
